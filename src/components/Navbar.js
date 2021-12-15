@@ -4,14 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, db } from "../firebse";
 import { signOut } from "firebase/auth";
 import { updateDoc, doc } from "firebase/firestore";
-import { useSelector } from "react-redux";
 import { AuthContext } from "../context/auth";
 
 function Navbar() {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-  /*   const { userId } = useSelector((state) => state.users);
-  console.log("current", userId); */
   const handleSignout = async () => {
     await updateDoc(doc(db, "users", auth.currentUser?.uid), {
       isOnline: false,
