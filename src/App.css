@@ -117,7 +117,7 @@ section .form {
 }
 
 .overlay {
-  transition:0.5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -130,5 +130,80 @@ section .form {
 }
 
 .text_container h3 {
+  text-align: center;
+}
+
+.home_container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  overflow: hidden;
+  height: calc(100vh - 70px);
+  width: 100vw;
+}
+
+.users_container {
+  margin-top: 10px;
+  border-right: 2px solid var(--color-6);
+  overflow-y: auto;
+}
+
+.user_wrapper {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.user_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_detail {
+  display: flex;
+  align-items: center;
+}
+
+.user_detail h4 {
+  margin-left: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--color-4);
+}
+
+.user_status {
+  width: 20xp;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.online {
+  color: #34eb52;
+
+}
+
+.offline {
+  color: #eb4034;
+}
+
+.messages_container {
+  position: relative;
+  width: 100%;
+}
+
+.messages_user {
+  padding : 10px;
+  text-align: center;
+  border-bottom: 2px solid var(--color-6);
+}
+
+.no_conv {
+  font-size: 20px;
+  color : var(--color-4);
   text-align: center;
 }
