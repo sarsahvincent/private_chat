@@ -184,7 +184,6 @@ section .form {
 
 .online {
   color: #34eb52;
-
 }
 
 .offline {
@@ -197,13 +196,144 @@ section .form {
 }
 
 .messages_user {
-  padding : 10px;
+  padding: 10px;
   text-align: center;
   border-bottom: 2px solid var(--color-6);
 }
 
 .no_conv {
   font-size: 20px;
-  color : var(--color-4);
+  color: var(--color-4);
   text-align: center;
 }
+
+.message_form {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.message_form input {
+  width: 40vw;
+  margin: 0px 10px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.messages {
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+  border-bottom: 1px solid var(--color-6);
+}
+
+.message_wrapper {
+  margin-top: 5px;
+  padding: 0px 5px;
+}
+.message_wrapper img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.message_wrapper p {
+  padding: 10px;
+  display: inline-block;
+  max-width: 50%;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.message_wrapper small {
+  display: inline-block;
+  margin-top: 15px;
+  opacity: 0.6;
+}
+
+.message_wrapper.own {
+  text-align: right;
+}
+
+.me {
+  background-color: var(--color-3);
+  color: white;
+}
+
+.friend {
+  background-color: var(--color-6);
+}
+
+.selected_user {
+  background-color: var(--color-6);
+}
+
+.truncate {
+  font-size: 14px;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate strong {
+  margin-right: 10px;
+}
+
+.unread {
+  margin-left: 10px;
+  background-color: var(--color-3);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 10px;
+}
+
+.sm_screen{
+  display:none;
+}
+
+@media screen and (max-width: 767px) {
+  .home_container {
+    grid-template-columns: 2fr 3fr;
+  }
+  .message_form{
+    left: 3%;
+    right: 0;
+    bottom: 5px;
+  }
+  .message_wrapper p{
+    max-width: 75%;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .home_container {
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .user_wrapper{
+   display: none;
+  }
+  .sm_container{
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .sm_screen{
+    display:inline-block;
+  }
+  .message_form input {
+    width: 50vw;
+    margin: 0px 10px;
+
+  }
+  .message_wrapper p{
+    max-width: 100%;
+  }
+}
+

@@ -59,7 +59,7 @@ function Profile() {
         avatar: "",
         avatarPath: "",
       });
-      window.location.reload()
+      window.location.reload();
     } catch (err) {
       console.log(err.message);
     }
